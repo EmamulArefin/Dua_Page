@@ -31,6 +31,7 @@ export const Settings = () => {
     setIsOpen(except === "language");
     setIsSettingsOpen(except === "general");
     setIsFontSettingsOpen(except === "font");
+    setIsAppearanceSettingsOpen(except === "appearance");
   };
 
   return (
@@ -156,10 +157,10 @@ export const Settings = () => {
                 <select
                   value={arabicScript}
                   onChange={(e) => setArabicScript(e.target.value)}
-                  className="w-full p-2 text-sm border rounded bg-gray-50"
+                  className="w-1/2 p-2 text-sm  text-gray-500 border  rounded bg-gray-50"
                 >
-                  <option>Uthmani</option>
-                  <option>IndoPak</option>
+                  <option className="text-gray-500">Uthmani</option>
+                  <option className="text-gray-500">IndoPak</option>
                 </select>
               </div>
 
@@ -169,11 +170,11 @@ export const Settings = () => {
                 <select
                   value={arabicFont}
                   onChange={(e) => setArabicFont(e.target.value)}
-                  className="w-full p-2 text-sm border rounded bg-gray-50"
+                  className="w-1/2 p-2 text-sm text-gray-500 border rounded bg-gray-50"
                 >
-                  <option>Me Quran</option>
-                  <option>Amiri</option>
-                  <option>Lateef</option>
+                  <option className="text-gray-500">Me Quran</option>
+                  <option className="text-gray-500">Amiri</option>
+                  <option className="text-gray-500">Lateef</option>
                 </select>
               </div>
 
@@ -197,17 +198,20 @@ export const Settings = () => {
         </div>
 
         {/* Appearance Settings Button */}
-        <div>
+        <div className="relative px-4 mt-4">
           <button
-            onClick={() => setIsAppearanceSettingsOpen(!isAppearanceSettingsOpen)}
-            className="w-full flex items-center text-black bg-gray-100 rounded-lg font-medium text-sm px-5 py-2.5 shadow-sm"
-          >
+            onClick={() => closeAllExcept(isAppearanceSettingsOpen ? "" : "appearance")}
+            className={`w-full flex items-center font-medium text-sm px-5 py-2.5 relative bg-gray-100 rounded-lg shadow-sm overflow-hidden ${
+              isAppearanceSettingsOpen ? "text-green-600" : "text-black"
+            }`}>
+            {isAppearanceSettingsOpen && <div className="absolute left-0 top-0 h-full w-1 bg-green-500 rounded-l-lg" />}
+            {/* Icon for Appearance Settings */}
             <div className="bg-gray-200 p-1 rounded-full mr-2">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2m6.364 1.636l-1.414 1.414M21 12h-2M17.364 18.364l-1.414-1.414M12 21v-2M6.636 18.364l1.414-1.414M3 12h2M6.636 5.636l1.414 1.414" />
               </svg>
             </div>
-            Appearance Settings
+            <span >Appearance Settings</span>
           </button>
 
           {isAppearanceSettingsOpen && (
