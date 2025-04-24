@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import feo from "@/app/assets/feo.png"; // Make sure to adjust the image path
+import feo from "@/app/assets/feo.png"; // Ensure to adjust the image path
 
 export const Category = () => {
   const [query, setQuery] = useState(""); // For search input
   const [openDropdown, setOpenDropdown] = useState(null); // Tracks which dropdown is open
 
   // Function to toggle the dropdown
-  const toggleDropdown = (category:any) => {
+  const toggleDropdown = (category: any) => {
     if (openDropdown === category) {
       setOpenDropdown(null); // Close if it's already open
     } else {
@@ -17,9 +17,9 @@ export const Category = () => {
   };
 
   return (
-    <div className="fixed sm:w-[330px] sm:h-[834px] sm:top-[100px] sm:left-[150px] sm:gap-[2px] bg-white rounded-2xl">
+    <div className="fixed lg:w-[330px] lg:h-[834px] lg:top-[100px] lg:left-[150px] lg:gap-[2px] bg-white rounded-2xl hidden lg:block">
       {/* Categories Header */}
-      <div className="sm:w-[330px] sm:h-[57px] sm:top-[100px] left-[150px] sm:gap-[2px] bg-green-500 rounded-tl-2xl rounded-tr-2xl">
+      <div className="lg:w-[330px] lg:h-[57px] lg:top-[100px] left-[150px] lg:gap-[2px] bg-green-500 rounded-tl-2xl rounded-tr-2xl">
         <h1 className="text-[20px] p-4 font-bold text-center text-white">Categories</h1>
       </div>
 

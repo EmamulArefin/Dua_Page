@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 import React, { useState } from "react";
 import { LuLanguages, LuSettings } from "react-icons/lu";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
@@ -16,7 +16,6 @@ export const Settings = () => {
   const [arabicFont, setArabicFont] = useState("Me Quran");
   const [isAppearanceSettingsOpen, setIsAppearanceSettingsOpen] = useState(false);
   const [isNightMode, setIsNightMode] = useState(false);
-
 
   const [settings, setSettings] = useState({
     arabic: false,
@@ -37,7 +36,7 @@ export const Settings = () => {
   };
 
   return (
-    <div className="fixed sm:w-[330px] sm:h-[834px] sm:top-[100px] sm:left-[1175px] sm:gap-[2px] bg-white rounded-2xl shadow-lg z-50 overflow-y-auto">
+    <div className="fixed lg:w-[330px] lg:h-[834px] lg:top-[100px] lg:left-[1175px] lg:gap-[2px] bg-white rounded-2xl shadow-lg z-50 overflow-y-auto hidden lg:block">
       <div className="container mx-auto mt-4 p-4">
         <h1 className="text-[20px] font-bold text-black text-center">Settings</h1>
 
@@ -128,7 +127,7 @@ export const Settings = () => {
           >
             {isFontSettingsOpen && <div className="absolute left-0 top-0 h-full w-1 bg-green-500 rounded-l-lg" />}
             <div className="bg-gray-200 p-1 rounded-full mr-2">
-            <HiOutlineSquares2X2 className={`w-4 h-4 ${ isFontSettingsOpen ? "text-green-500" : "text-black"}`} />
+              <HiOutlineSquares2X2 className={`w-4 h-4 ${isFontSettingsOpen ? "text-green-500" : "text-black"}`} />
             </div>
             <span className={`${isFontSettingsOpen ? "text-green-500" : "text-black"}`}>Font Settings</span>
           </button>
@@ -209,7 +208,7 @@ export const Settings = () => {
             <div className="bg-gray-200 p-1 rounded-full mr-2">
               <HiOutlineSquares2X2 className={`w-4 h-4 ${isAppearanceSettingsOpen ? "text-green-500" : "text-black"}`} />
             </div>
-            <span >Appearance Settings</span>
+            <span>Appearance Settings</span>
           </button>
 
           {isAppearanceSettingsOpen && (
