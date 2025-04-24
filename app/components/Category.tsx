@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import feo from "@/assets/feo.png"; // Make sure to adjust the image path
+import feo from "@/app/assets/feo.png"; // Make sure to adjust the image path
 
 export const Category = () => {
   const [query, setQuery] = useState(""); // For search input

@@ -1,15 +1,15 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "@/assets/logo.png";
-import Home from "@/assets/home.png";
-import All_Dua from "@/assets/All-Duas.png";
-import memo from "@/assets/Memorize.png";
-import Bookmark from "@/assets/Bookmark.png";
-import Ruqyah from "@/assets/Ruqyah.png";
-import dua_qa from "@/assets/Dua_Q&A.png";
-import Book from "@/assets/Book.png";
-import Support from "@/assets/want-support.png";
+import Logo from "@/app/assets/logo.png";
+import Home from "@/app/assets/home.png";
+import All_Dua from "@/app/assets/All-Duas.png";
+import memo from "@/app/assets/Memorize.png";
+import Bookmark from "@/app/assets/Bookmark.png";
+import Ruqyah from "@/app/assets/Ruqyah.png";
+import dua_qa from "@/app/assets/Dua_Q&A.png";
+import Book from "@/app/assets/Book.png";
+import Support from "@/app/assets/want-support.png";
 import Link from "next/link";
 
 

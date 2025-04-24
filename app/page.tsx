@@ -1,8 +1,8 @@
-import { Category } from "@/components/Category";
-import { Hero } from "@/components/Hero";
-import { Navbar } from "@/components/Navbar";
-import { ScrollView } from "@/components/ScrollView";
-import { Settings } from "@/components/Settings";
+import { Category } from "@//app/components/Category";
+import { Hero } from "@/app/components/Hero";
+import { Navbar } from "@/app/components/Navbar";
+import { ScrollView } from "@/app/components/ScrollView";
+import { Settings } from "@//app/components/Settings";
 import Image from "next/image";
 
 export default function Home() {

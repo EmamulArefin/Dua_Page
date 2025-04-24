@@ -1,12 +1,12 @@
 "use client"; 
 import React from "react";
 import Image from "next/image";
-import al from "@/assets/allah.png"; // Make sure to adjust the image path
-import hints from "@/assets/hints.png"; // Add your hints image path here
-import bookmark from "@/assets/bmark.png"; // Add your bookmark image path here
-import share from "@/assets/share.png"; // Add your share image path here
-import copy from "@/assets/copy.png"; // Add your copy image path here
-import report from "@/assets/report.png"; // Add your report image path here
+import al from "@/app/assets/allah.png"; // Make sure to adjust the image path
+import hints from "@/app/assets/hints.png"; // Add your hints image path here
+import bookmark from "@/app/assets/bmark.png"; // Add your bookmark image path here
+import share from "@/app/assets/share.png"; // Add your share image path here
+import copy from "@/app/assets/copy.png"; // Add your copy image path here
+import report from "@/app/assets/report.png"; // Add your report image path here
 
 export const ScrollView = () => {
   // Sample data for sections with multiple contents per category
