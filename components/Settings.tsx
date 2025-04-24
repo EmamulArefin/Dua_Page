@@ -2,8 +2,11 @@
 
 import React, { useState } from "react";
 import { LuLanguages, LuSettings } from "react-icons/lu";
+import { HiOutlineSquares2X2 } from "react-icons/hi2";
+import { HiOutlineSquare2Stack } from "react-icons/hi2";
 
 export const Settings = () => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isFontSettingsOpen, setIsFontSettingsOpen] = useState(false);
@@ -94,7 +97,7 @@ export const Settings = () => {
           >
             {isSettingsOpen && <div className="absolute left-0 top-0 h-full w-1 bg-green-500 rounded-l-lg" />}
             <div className="bg-gray-200 p-1 rounded-full mr-2">
-              <LuSettings className={`w-4 h-4 ${isSettingsOpen ? "text-green-500" : "text-black"}`} />
+              <HiOutlineSquare2Stack className={`w-4 h-4 ${isSettingsOpen ? "text-green-500" : "text-black"}`} />
             </div>
             <span className={`${isSettingsOpen ? "text-green-500" : "text-black"}`}>General Settings</span>
           </button>
@@ -108,7 +111,7 @@ export const Settings = () => {
                     type="checkbox"
                     checked={settings[key as keyof typeof settings]}
                     onChange={() => toggleSetting(key as keyof typeof settings)}
-                    className="accent-green-500 w-4 h-4 border-green-600"
+                    className="accent-green-500 w-4 h-4 border-green-500"
                   />
                 </div>
               ))}
@@ -126,9 +129,7 @@ export const Settings = () => {
           >
             {isFontSettingsOpen && <div className="absolute left-0 top-0 h-full w-1 bg-green-500 rounded-l-lg" />}
             <div className="bg-gray-200 p-1 rounded-full mr-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
+            <HiOutlineSquares2X2 className={`w-4 h-4 ${ isFontSettingsOpen ? "text-green-500" : "text-black"}`} />
             </div>
             <span className={`${isFontSettingsOpen ? "text-green-500" : "text-black"}`}>Font Settings</span>
           </button>
@@ -139,15 +140,15 @@ export const Settings = () => {
               <div>
                 <label className="block text-sm text-gray-700 mb-1">Translation Font Size</label>
                 <div className="flex items-center">
-                  <input
+                  <input 
                     type="range"
                     min={10}
                     max={30}
                     value={translationFontSize}
                     onChange={(e) => setTranslationFontSize(Number(e.target.value))}
-                    className="w-full accent-green-500"
+                    className="w-full h-1 accent-green-500 rounded-lg"
                   />
-                  <span className="ml-2 text-sm">{translationFontSize}</span>
+                  <span className="ml-2 text-black text-sm">{translationFontSize}</span>
                 </div>
               </div>
 
@@ -188,9 +189,9 @@ export const Settings = () => {
                     max={30}
                     value={arabicFontSize}
                     onChange={(e) => setArabicFontSize(Number(e.target.value))}
-                    className="w-full accent-green-500"
+                    className="w-full h-1 accent-green-500 rounded-lg"
                   />
-                  <span className="ml-2 text-sm">{arabicFontSize}</span>
+                  <span className="ml-2 text-black text-sm">{arabicFontSize}</span>
                 </div>
               </div>
             </div>
@@ -207,9 +208,7 @@ export const Settings = () => {
             {isAppearanceSettingsOpen && <div className="absolute left-0 top-0 h-full w-1 bg-green-500 rounded-l-lg" />}
             {/* Icon for Appearance Settings */}
             <div className="bg-gray-200 p-1 rounded-full mr-2">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2m6.364 1.636l-1.414 1.414M21 12h-2M17.364 18.364l-1.414-1.414M12 21v-2M6.636 18.364l1.414-1.414M3 12h2M6.636 5.636l1.414 1.414" />
-              </svg>
+              <HiOutlineSquares2X2 className={`w-4 h-4 ${isAppearanceSettingsOpen ? "text-green-500" : "text-black"}`} />
             </div>
             <span >Appearance Settings</span>
           </button>

@@ -7,7 +7,7 @@ import Image from "next/image";
 export const Hero = () => {
     const [query, setQuery] = useState("");
     return ( 
-        <div className=" fixed sm:w-[1350px] sm:h-[36px] sm:top-[40px] sm:left-[140px] sm:gap-[2px]">
+        <div className=" fixed sm:w-[1350px] sm:h-[36px] sm:top-[40px] sm:left-[140px] sm:gap-[2px] ">
            <div className="fixed sm:w-[117px] sm:h-[36px] sm:top-[45px] sm:left-[140px] sm:gap-[2px]">
                 <h1 className="font-bold text-center text-gray-800">Dua Page</h1>
            </div>
