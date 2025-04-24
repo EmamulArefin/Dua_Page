@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "@/app/assets/logo.png";
-import HomeImage from "@/app/assets/home.png";
+import HomeImage from "@/app/assets/Home.png";
 import All_Dua from "@/app/assets/All-Duas.png";
 import memo from "@/app/assets/Memorize.png";
 import Bookmark from "@/app/assets/Bookmark.png";
