@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "@/app/assets/logo.png";
-import Home from "@/app/assets/home.png";
+import HomeImage from "@/app/assets/home.png";
 import All_Dua from "@/app/assets/All-Duas.png";
 import memo from "@/app/assets/Memorize.png";
 import Bookmark from "@/app/assets/Bookmark.png";
@@ -29,7 +29,7 @@ export const Navbar = () => {
                 <ul className="flex flex-col gap-[15px] sm:gap-[27px]">
                     <li className="w-[30px] h-[30px] sm:w-[38px] sm:h-[38px] rounded-full flex items-center justify-center hover:bg-gray-300 cursor-pointer transition duration-300 ease-in-out">
                         <Link href="#Home">
-                        <Image src={Home} alt="Logo" width={20} height={20} />
+                        <Image src={HomeImage} alt="Logo" width={20} height={20} />
                         </Link>
                     </li>
                     <li className="w-[30px] h-[30px] sm:w-[38px] sm:h-[38px]  rounded-full flex items-center justify-center hover:bg-gray-300 cursor-pointer transition duration-300 ease-in-out">
